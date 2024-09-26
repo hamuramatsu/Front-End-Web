@@ -1,0 +1,235 @@
+body {
+    color: purple;
+    background: white;
+    font-family: "Times New Roman";
+    margin: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  * {
+    /*applies to everything*/
+    margin: 0;
+    padding: 0;
+  }
+  
+  header{
+    position: sticky;
+    height: 2rem;
+    padding: 10px;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: space-between; /* Space between the nav and user menu */
+    align-items: center;
+  /*   background-color: white; */
+    background-color: #e8e8e8;
+    z-index: 1000; /* Keeps it above other content */
+    border-radius: 4px;
+  }
+  
+  h1 {
+    font-weight: normal;
+    font-size: 38px;
+    margin-left: 0.7rem;
+  }
+  
+  h1 img{
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* nav bar styling */
+  #nav-bar ul {
+      list-style-type: none; /* This removes the bullets */
+      margin: 0;
+      padding-left: 2rem;
+      padding-right: 0rem;
+      display: flex; /* Aligns items in a row */
+      flex-direction: row;
+      justify-content: space-around; /* Adjust spacing based on screen size */
+    }
+  
+    #nav-bar li {
+      margin-left: 40px;
+    }
+  
+    #nav-bar a {
+      text-decoration: none;
+      font-size: 16px;
+      color: purple;
+      margin: 0.3rem;
+  /*     
+      padding: 0.7rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      background-color: #e8e8e8;
+      border-radius: 4px; */
+    }
+  
+  
+  /* user menu styling */
+    #user-menu ul {
+      list-style-type: none; /* Removes bullets */
+      margin-right: 0.7rem;
+      padding: 0;
+      display: flex;
+    }
+  
+    #user-menu li {
+      margin-left: 20px;
+  /*     margin-left:10px; */
+    }
+  
+    #user-menu a {
+      text-decoration: none; /* Removes underline */
+      font-size: 16px;
+      color: purple;
+  /*     
+      padding: 0.7rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-color: #e8e8e8;
+      border-radius: 4px; */
+    }
+  
+  /* secondary nav */
+  nav.secondary-nav {
+    position: fixed; /* left side of screen */
+    top: 5.7rem;
+    margin: 0.3rem;
+    width: 12rem;
+    /*height: 100vh;*/
+    bottom: 3rem;
+    padding: 1rem;
+    background-color: #D5C8E5;
+    border-radius: 4px;
+  }
+  
+  #section1 input {
+    width: 10.4rem;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.3rem;
+    border: none;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  h2 {
+    font-weight: normal;
+  }
+  
+  #section2 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+    #section2 ul{
+      list-style-type: none;
+      margin-top: 5px;
+    }
+  
+    #section2 li{
+      margin-top: 2px;
+    }
+  
+    #section2 a{
+      text-decoration: none;
+      font-size: 16px;
+      color: #555;
+    }
+  
+  #section3 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  #section4 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  #section5 {
+    margin: 0.3rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  /* main */
+  #suggested-posts {
+    margin-left: 15.7rem;
+    margin-top: 1rem;
+  }
+  
+  
+  main {
+    margin: 0.3rem;
+    position: absolute; /* Absolute positioning */
+    top: 7.7rem; /* Position from the top */
+    left: 16.3rem; /* Position from the left */
+    right: 1rem;
+    bottom: 3rem;
+    padding: 1rem; /* Inner padding */
+    background-color: #D5C8E5; /* Background color */
+    border-radius: 4px; /* Rounded corners */
+    
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center items horizontally */
+  }
+  
+    main img {
+      width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain the aspect ratio */
+      max-height: 50%; /* Limit the height to 30% of the parent */
+      object-fit: cover; /* Ensure the image covers the area appropriately */
+      border-radius: 4px;
+    }
+  
+    main section {
+      text-align: left; /* Center align the text */
+      margin-top: 1rem; /* Space between the image and the text */
+    }
+  
+    main n {
+      display: block; /* Make each text element a block for stacking */
+      margin: 0.3rem 0; /* Space between text elements */
+      font-size: 16px; /* Font size for better readability */
+      color: #222; /* Text color */
+    }
+  
+  /* footer menu styling */
+  #footer-menu ul {
+    list-style-type: none; /* This removes the bullets */
+    margin-top: 35.7rem;
+    margin-bottom: 1.5rem;
+    margin-left: 16rem;
+    margin-right: 16rem;
+    display: flex; /* Aligns items in a row */
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+    #footer-menu li {
+      margin-right: 0px; /* Space between links */
+    }
+  
+    #footer-menu a {
+      text-decoration: none;
+      font-size: 12px;
+      color: purple;
+    }
