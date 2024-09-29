@@ -1,3 +1,6 @@
+
+@media screen and (min-width: 1000px){
+
 body {
     color: purple;
     background: white;
@@ -63,6 +66,11 @@ body {
       padding-right: 2rem;
       background-color: #e8e8e8;
       border-radius: 4px; */
+    }
+
+
+    #hamburger-menu img{
+      display: none;
     }
   
   
@@ -231,7 +239,7 @@ body {
 #footer-menu ul {
     list-style-type: none; /* Removes bullets */
     margin: 0 auto; /* Centers the footer links */
-    padding-left: 16rem;
+    padding-left: 14rem;
     padding-right: 16rem;
     display: flex; /* Aligns items in a row */
     justify-content: space-around; /* Evenly space the links */
@@ -246,3 +254,482 @@ body {
     font-size: 12px;
     color: purple;
   }
+
+    
+}
+
+
+@media screen and (560px < width < 1000px){
+  body {
+    color: purple;
+    background: white;
+    font-family: "Times New Roman";
+    margin: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  * {
+    /*applies to everything*/
+    margin: 0;
+    padding: 0;
+  }
+  
+  header{
+    position: sticky;
+    height: 2rem;
+    padding: 10px;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: space-between; /* Space between the nav and user menu */
+    align-items: center;
+  /*   background-color: white; */
+    background-color: #e8e8e8;
+    z-index: 1000; /* Keeps it above other content */
+    border-radius: 4px;
+  }
+  
+  h1 {
+    font-weight: normal;
+    font-size: 38px;
+    margin-left: 0.7rem;
+  }
+  
+  h1 img{
+    width: 24px;
+    height: 24px;
+  }
+
+
+  
+  /* nav bar styling */
+  #nav-bar ul {
+    display: none;
+    }
+  
+
+  
+  /* user menu styling */
+    #user-menu ul {
+      list-style-type: none; /* Removes bullets */
+      margin-right: 0.7rem;
+      padding: 0;
+      display: flex;
+    }
+
+    #hamburger-menu img{
+      /* display: none; */
+      height: 1rem;
+      width: 1.2rem;
+    }
+
+    #user-menu li {
+      margin-left: 20px;
+  /*     margin-left:10px; */
+    }
+  
+    #user-menu a {
+      text-decoration: none; /* Removes underline */
+      font-size: 16px;
+      color: purple;
+  /*     
+      padding: 0.7rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-color: #e8e8e8;
+      border-radius: 4px; */
+    }
+  
+  /* secondary nav */
+  nav.secondary-nav {
+    position: absolute; /* left side of screen */
+    top: 5.7rem;
+    margin: 0.3rem;
+    width: 12rem;
+    /*height: 100vh;*/
+    bottom: 3rem;
+    padding: 1rem;
+    background-color: #D5C8E5;
+    border-radius: 4px;
+    overflow-y: scroll;
+
+  }
+  
+  #section1 input {
+    width: 10.4rem;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.3rem;
+    border: none;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  h2 {
+    font-weight: normal;
+  }
+  
+  #section2 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+    #section2 ul{
+      list-style-type: none;
+      margin-top: 5px;
+    }
+  
+    #section2 li{
+      margin-top: 2px;
+    }
+  
+    #section2 a{
+      text-decoration: none;
+      font-size: 16px;
+      color: #555;
+    }
+  
+  #section3 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  #section4 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  #section5 {
+    margin: 0.3rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  /* main */
+  #suggested-posts {
+    margin-left: 15.7rem;
+    margin-top: 1rem;
+  }
+  
+  
+  main {
+    margin: 0.3rem;
+    position: absolute; /* Absolute positioning */
+    top: 7.7rem; /* Position from the top */
+    left: 16.3rem; /* Position from the left */
+    right: 1rem;
+    bottom: 3rem;
+    padding: 1rem; /* Inner padding */
+    background-color: #D5C8E5; /* Background color */
+    border-radius: 4px; /* Rounded corners */
+    
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center items horizontally */
+
+    overflow-y: scroll;
+
+  }
+  
+    main img {
+      width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain the aspect ratio */
+      max-height: 50%; /* Limit the height to 30% of the parent */
+      object-fit: cover; /* Ensure the image covers the area appropriately */
+      border-radius: 4px;
+    }
+  
+    main section {
+      text-align: left; /* Center align the text */
+      margin-top: 1rem; /* Space between the image and the text */
+    }
+  
+    main n {
+      display: block; /* Make each text element a block for stacking */
+      margin: 0.3rem 0; /* Space between text elements */
+      font-size: 16px; /* Font size for better readability */
+      color: #222; /* Text color */
+    }
+  
+
+/* Footer menu styling */
+#footer-menu {
+    position: fixed; /* Fixes the footer to the bottom of the screen */
+    bottom: 0; /* Aligns the footer to the bottom */
+    width: 100%; /* Ensures the footer spans the full width of the screen */
+    /* background-color: #f5f5f5; Optional background color */
+    padding: 1rem 0; /* Padding for some spacing */
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+#footer-menu ul {
+    list-style-type: none; /* Removes bullets */
+    margin: 0 auto; /* Centers the footer links */
+    padding-left: 1rem;
+    padding-right: 3rem;
+    display: flex; /* Aligns items in a row */
+    justify-content: space-around; /* Evenly space the links */
+}
+
+#footer-menu li {
+    margin: 0; /* No additional margins */
+}
+
+#footer-menu a {
+    text-decoration: none;
+    font-size: 12px;
+    color: purple;
+  }
+}
+
+@media screen and (width < 560px){
+  body {
+    color: purple;
+    background: white;
+    font-family: "Times New Roman";
+    margin: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  * {
+    /*applies to everything*/
+    margin: 0;
+    padding: 0;
+  }
+  
+  header{
+    position: sticky;
+    height: 2rem;
+    padding: 10px;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: space-between; /* Space between the nav and user menu */
+    align-items: center;
+  /*   background-color: white; */
+    background-color: #e8e8e8;
+    z-index: 1000; /* Keeps it above other content */
+    border-radius: 4px;
+  }
+  
+  h1 {
+    font-weight: normal;
+    font-size: 38px;
+    margin-left: 0.7rem;
+  }
+  
+  h1 img{
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+  /* nav bar styling */
+  #nav-bar ul {
+    display: none;
+    }
+  
+
+  
+  /* user menu styling */
+    #user-menu ul {
+      list-style-type: none; /* Removes bullets */
+      margin-right: 0.7rem;
+      padding: 0;
+      display: flex;
+    }
+
+    #hamburger-menu img{
+      /* display: none; */
+      height: 1rem;
+      width: 1.2rem;
+    }
+
+    #user-menu li {
+      margin-left: 20px;
+  /*     margin-left:10px; */
+    }
+  
+    #user-menu a {
+      text-decoration: none; /* Removes underline */
+      font-size: 16px;
+      color: purple;
+  /*     
+      padding: 0.7rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-color: #e8e8e8;
+      border-radius: 4px; */
+    }
+  
+  /* secondary nav */
+  nav.secondary-nav {
+    display: none;
+    position: absolute; /* left side of screen */
+    top: 5.7rem;
+    margin: 0.3rem;
+    width: 12rem;
+    /*height: 100vh;*/
+    bottom: 3rem;
+    padding: 1rem;
+    background-color: #D5C8E5;
+    border-radius: 4px;
+    overflow-y: scroll;
+
+  }
+  
+  #section1 input {
+    width: 10.4rem;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.3rem;
+    border: none;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  h2 {
+    font-weight: normal;
+  }
+  
+  #section2 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+    #section2 ul{
+      list-style-type: none;
+      margin-top: 5px;
+    }
+  
+    #section2 li{
+      margin-top: 2px;
+    }
+  
+    #section2 a{
+      text-decoration: none;
+      font-size: 16px;
+      color: #555;
+    }
+  
+  #section3 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  #section4 {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  #section5 {
+    margin: 0.3rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    background-color: #fbf4ff;
+    border-radius: 4px;
+  }
+  
+  /* main */
+  #suggested-posts {
+    display: flex;
+    margin-left: 0.7rem;
+    margin-top: 1rem;
+  }
+  
+  
+  main {
+    margin: 0.3rem;
+    position: flex; /* Absolute positioning */
+    top: 7.7rem; /* Position from the top */
+    left: 16.3rem; /* Position from the left */
+    right: 1rem;
+    bottom: 3rem;
+    padding: 1rem; /* Inner padding */
+    background-color: #D5C8E5; /* Background color */
+    border-radius: 4px; /* Rounded corners */
+    
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center items horizontally */
+
+    overflow-y: scroll;
+
+  }
+  
+    main img {
+      width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain the aspect ratio */
+      max-height: 50%; /* Limit the height to 30% of the parent */
+      object-fit: cover; /* Ensure the image covers the area appropriately */
+      border-radius: 4px;
+    }
+  
+    main section {
+      text-align: left; /* Center align the text */
+      margin-top: 1rem; /* Space between the image and the text */
+    }
+  
+    main n {
+      display: block; /* Make each text element a block for stacking */
+      margin: 0.3rem 0; /* Space between text elements */
+      font-size: 16px; /* Font size for better readability */
+      color: #222; /* Text color */
+    }
+  
+
+/* Footer menu styling */
+#footer-menu {
+    position: fixed; /* Fixes the footer to the bottom of the screen */
+    bottom: 0; /* Aligns the footer to the bottom */
+    width: 100%; /* Ensures the footer spans the full width of the screen */
+    /* background-color: #f5f5f5; Optional background color */
+    padding: 1rem 0; /* Padding for some spacing */
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+#footer-menu ul {
+    list-style-type: none; /* Removes bullets */
+    margin: 0 auto; /* Centers the footer links */
+    /* padding-left: 16rem; */
+    padding-right: 2rem;
+    display: flex; /* Aligns items in a row */
+    justify-content: space-around; /* Evenly space the links */
+}
+
+#footer-menu li {
+    margin: 0; /* No additional margins */
+}
+
+#footer-menu a {
+    text-decoration: none;
+    font-size: 12px;
+    color: purple;
+  }
+}
