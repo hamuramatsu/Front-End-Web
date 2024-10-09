@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>midterm project</title>
+</head>
+<body>
+    <header id="main-header">
+        <section id="logo">
+            <!-- <h1>HM</h1> -->
+        </section>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <!-- <img src="" alt=""> -->
+        <h1>hello. i'm haley muramatsu. i am a hawaii-based designer, currently studying at nyu.</h1>
+    </section>
+    <div id="scroll-title">HALEY MURAMATSU</div>
+
+    <!-- Script for scroll behavior from gpt -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('main-header');
+            var navBar = document.getElementById('nav-bar');
+            var scrollY = window.scrollY;
+
+            // When the user scrolls past 100px, move the navbar to the bottom-right
+            if (scrollY > 100) {
+                navBar.classList.add('bottom-right');
+            } else {
+                navBar.classList.remove('bottom-right');
+            }
+        });
+    </script>
+
+    <main>
+        <div class="grid">
+            <div class="featured">
+                <p>FEATURED WORKS<p>
+            </div>
+            <div class="one"><a href="#"><img src="images/typography.png" alt="typography is"></a></div>
+                <div class="text-one">_____typography is</div>
+            <div class="two"><a href="#"><img src="images/alumnihoodie.png" alt="alumni hoodie"></a></div>
+                <div class="text-two">_____admission</div>
+            <div class="three"><a href="#"><img src="images/varietyshow.png" alt="vaiety show"></a></div>
+                <div class="text-three">bread: the variety show_____</div>
+            <div class="four"><a href="#"><img src="images/inthemoodforlove.png" alt="in the mood for love"></a></div>
+                <div class="text-four">in the mood for love_____</div>
+            <div class="five"><a href="#"><img src="images/principles.jpeg" alt="principles"></a></div>
+                <div class="text-five">principles_____</div>
+            <div class="six"><a href="#"><img src="images/appropriation.jpg" alt="appropriation"></a></div>
+                <div class="text-six">_____appropriation</div>
+        </div>
+        <div id="badge">
+            <video autoplay loop muted playsinline>
+                <source src="images/badge3 copy.mp4" type="video/mp4">
+                Your browser does not support the <video> tag.
+            </video>
+        </div>
+    </main>
+</body>
+</html>

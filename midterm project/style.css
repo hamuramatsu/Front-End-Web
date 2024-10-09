@@ -1,0 +1,208 @@
+body {
+  color: black;
+  background: white;
+  font-family: helvetica;
+  margin: 1rem;
+  margin-top: 1.5rem;
+}
+
+* {
+  /*applies to everything*/
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  position: sticky;
+  height: 2rem;
+  padding: 10px;
+  margin: 0.3rem;
+  display: flex;
+  justify-content: space-between; /* Space between the nav and user menu */
+  align-items: center;
+  z-index: 1000; /* Keeps it above other content */
+  /* background: rgb(240, 240, 240); */
+}
+
+#logo {
+  font-size: large;
+}
+
+
+/* nav bar styling */
+nav ul {
+    list-style-type: none; /* This removes the bullets */
+    margin: 0;
+    /* padding-left: 2rem; */
+    padding-right: 0rem;
+    display: flex; /* Aligns items in a row */
+    flex-direction: row;
+    justify-content: flex-end; /* Adjust spacing based on screen size */
+  }
+
+  nav li {
+    margin-left: 40px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    margin: 0.3rem;
+  }
+
+
+#hero {
+  align-items: center;
+  padding: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin: 0.3rem;
+  /* background-color: rgb(240, 240, 240); */
+  font-size: xx-large;
+  /* text-align: center; */
+  text-align: justify;
+}
+
+/* Basic styling for the title */
+#scroll-title {
+  position: sticky;
+  top: 480px;        /* This will keep it at 50px from the top while scrolling */
+  left: 10px;       /* Horizontal position on the left side */
+  transform: rotate(-90deg); /* Rotate the text 90 degrees */
+  transform-origin: left top; /* Adjust rotation point */
+  font-size: 42px;  /* Adjust the font size */
+  margin-top: 0px; /* Start lower on the page */
+  margin-left: 30px; /* Start lower on the page */
+  z-index: 1000; /* Ensures it's above other content */
+  /* background-color: aqua; */
+
+}
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+  #scroll-title {
+      font-size: 18px; /* Reduce font size on smaller screens */
+  }
+}
+
+/* Bottom-right position for the nav bar when it scrolls out of view */
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.474); /* Optional background */
+  padding: 10px;
+  /* border-radius: 10px; */
+  z-index: 999; /* Ensures it's above other content */
+  transition: all 1s ease;
+
+  display: flex; /* Flexbox to allow direction change */
+  flex-direction: column; /* Change to column layout */
+  align-items: flex-end; /* Align items to the end */
+}
+
+main {
+  margin: 2rem auto; /* Add top margin for spacing */
+  padding: 1rem;
+  /* background-color: #e9e9e9; */
+  max-width: 1200px; /* Optional: set a max-width */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+/* 
+main img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(5, 1fr);  /* 5 equal rows with fixed height */
+  gap: 1rem;/* Gap between grid items */
+}
+
+.featured {
+  display: block; /* Ensures it's treated as a block element */
+  grid-column: 4 / 5; /* Span across columns 1 to 2 */
+  grid-row: 1;    /* Span across rows 1 to 2 */
+}
+
+.featured p{
+  font-size: 36px;
+  text-align: right;
+}
+
+.one {
+  grid-column: 1 / 3; /* Span across columns 1 to 2 */
+  grid-row: 1 / 3;    /* Span across rows 1 to 2 */
+}
+
+.two {
+  grid-column: 3;     /* Stay in column 3 */
+  grid-row: 2 / 3;        /* Stay in row 1 */
+}
+
+.three {
+  grid-column: 2;     /* Stay in column 2 */
+  grid-row: 3;    /* Span from row 3 to 4 */
+}
+.text-three {
+  text-align: right;
+}
+
+.four {
+  grid-column: 3 / 5; /* Span across columns 3 to 4 */
+  grid-row: 3 / 5;        /* Stay in row 2 */
+}
+.text-four {
+  grid-column: 2;
+  grid-row: 4;
+  text-align: right;
+}
+
+.five {
+  grid-column: 2;
+  grid-row: 5 / 6;
+}
+.text-five {
+  grid-column: 1;
+  grid-row: 5;
+  text-align: right;
+}
+
+.six {
+  grid-column: 3; /* Span across columns 3 to 4 */
+  grid-row: 5 / 6;        /* Stay in row 2 */
+}
+.text-six {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+
+img {
+  width: 100%;  /* Ensure the image fills its grid area */
+  height: 100%; /* Ensure the image fills the height of the grid cell */
+  object-fit: cover; /* Maintain aspect ratio and cover the grid area */
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  /* filter: sepia(1) saturate(0) brightness(1) hue-rotate(135deg); */
+}
+
+#badge {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  margin-top: 10rem;
+}
+
+#badge video{
+  width: 50%;   /* Adjust to the desired width */
+  height: auto;  /* Automatically adjusts height to maintain aspect ratio*/
+}
