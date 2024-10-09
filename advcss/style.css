@@ -1,0 +1,54 @@
+header {
+    background-color: wheat;
+    padding: 1em;
+    height: 2em;
+    transition: bacground-color 0.2s, height 1s;
+}
+
+header:hover {
+    background-color: brown;
+    height: 6em;
+}
+header:hover a {
+    color: wheat;
+}
+
+header a:first-child:before {
+    content: "";
+}
+
+header a::before {
+    content: "-";
+    display: inline-block;
+    background-color: brown;
+    margin: 0.5em;
+    width: 1em;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: navy;
+}
+
+article {
+    padding: 2em;
+}
+
+article a {
+    background-color: yellow;
+}
+
+footer {
+    background-color: black;
+    height: 1em;
+    padding: 1em;
+    color: white;
+}
+
+footer a{
+    color: skyblue;
+}
