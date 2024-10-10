@@ -73,6 +73,7 @@ nav ul {
   display: inline-block; /* Required for hover effect and positioning */ 
 }
 
+/* insert image on hover from gpt */
 #hello:hover::before {
   content: url('images/smiley.png');
   position: absolute;
