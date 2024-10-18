@@ -1,0 +1,17 @@
+body {
+    background-color: peachpuff;
+}
+
+#displayText {
+    background-color: white;
+    margin: 1em 0;
+    padding: 1em;
+    box-shadow: inset 1px 1px 3px black;
+}
+
+#settingsSection {
+    position: fixed;
+    top: 0;
+    right: 1em;
+    margin: 1em 0;
+}
