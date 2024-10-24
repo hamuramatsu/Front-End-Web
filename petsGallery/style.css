@@ -1,0 +1,63 @@
+body {
+    font-family: Helvetica;
+    background: wheat;
+}
+
+h1, h2, h3 {
+    font-family: Helvetica;
+}
+
+body>header {
+    background-color: chocolate;
+    padding: 1em;
+    text-align: center;
+}
+
+body>header>h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.error {
+    border: solid 2px red;
+}
+
+.error::after {
+    content: "missing content";
+    color: red;
+}
+
+body>fieldset {
+    padding: 1em;
+    border: solid 1px black;
+    margin: 1em;
+}
+
+input, button {
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+
+#petsGalleryMain {
+    background-color: white;
+    min-height: 10em;
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#petsGalleryMain>section {
+    margin: 1em;
+}
+
+#petsGalleryMain>section>img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+}
+
+#pictureInput {
+    width: 30em;
+
+}
