@@ -36,7 +36,7 @@ function addNewPet() {
     </section>
     `;
     let removeButton = document.createElement('button');
-    removeButton.innerHTML = "Remove";
+    removeButton.innerText = "Remove";
     removeButton.onclick = function(){
         petSection.remove();
     }
