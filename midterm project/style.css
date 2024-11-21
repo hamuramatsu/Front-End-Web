@@ -122,7 +122,7 @@ main {
   margin-right: 1rem;
 }
 
-.featured h3{
+.featured h2{
   font-size: 36px;
   text-align: right;
   font-weight: normal;
@@ -256,7 +256,7 @@ img:hover {
     font-size: 36px;
     top: 420px;
   }
-  .featured h3{
+  .featured h2{
     font-size: 28px;
   }
 }
