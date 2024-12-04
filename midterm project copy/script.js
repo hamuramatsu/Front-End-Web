@@ -11,8 +11,7 @@ fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
     return response.json();
   })
   .then((data) => {
-
-    console.log(data);
+    // console.log(data);
     // Render your data to the HTML
     const postsDiv = document.getElementById('posts');
     postsDiv.innerHTML = data.result
