@@ -1,5 +1,5 @@
 const sanityUrl = 'https://c2s2sg6g.api.sanity.io/v2022-03-07/data/query/production';
-const query = '*[_type == "post"]{ _id, title, "bodyText": pt::text(body), "imageUrl": image.asset->url }';
+const query = '*[_type == "work"]{ _id, title, "bodyText": pt::text(body), "imageUrl": image1.asset->url }';
 
 
 fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
@@ -17,11 +17,11 @@ fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
     const postsDiv = document.getElementById('posts');
     postsDiv.innerHTML = data.result
       .map(
-        (post) => `
+        (work) => `
           <div>
-            <h2>${post.title}</h2>
-            <p>${post.bodyText}</p>
-            <img src="${post.imageUrl}" alt="${post.title}">
+            <h2>${work.title}</h2>
+            <p>${work.bodyText}</p>
+            <img src="${work.imageUrl}" alt="${work.title}">
           </div>
         `
       )
