@@ -17,6 +17,11 @@ export const workType = defineType({
         validation: (rule) => rule.required(),
       }),
       defineField({
+        name: 'order',
+        type: 'number', // Use 'number' for manual ordering
+        description: 'Specify the order for displaying this work.',
+      }),
+      defineField({
         name: 'publishedAt',
         type: 'datetime',
         initialValue: () => new Date().toISOString(),
