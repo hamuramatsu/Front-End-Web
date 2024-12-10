@@ -97,9 +97,80 @@ body {
     width: 100%;  /* Ensure the image fills its grid area */
     height: 100%; /* Ensure the image fills the height of the grid cell */
     object-fit: cover; /* Maintain aspect ratio and cover the grid area */
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    /* -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); */
+    max-width: 700px;
   }
+
+
+  #detailsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin: 6rem;
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  @media (max-width: 1130px) {
+    #detailsContainer {
+        align-items: flex-start;
+    }
+    #detailsContainer img {
+        max-width: 400px;
+        height: auto;
+    }
+    #workDetails {
+    display: flex;
+    max-width: 300px;
+}
+  }
+
+  @media (max-width: 940px) {
+    #detailsContainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 4rem;
+        margin-top: 0;
+        gap: 3rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    #detailsContainer {
+        margin: 2rem;
+        margin-top: 0;
+        gap: 3rem;
+    }
+  }
+  
+
+  #detailsContainer h1{
+    font-size: 36px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+  }
+
+  #detailsContainer p {
+    font-size: 16px;
+  }
+
+#workDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#detailsContainer a{
+  /* text-decoration: none; */
+  color: black;
+}
+
+#detailsContainer a:hover{
+  font-weight: bold;
+}
   
   footer {
     bottom: 0;

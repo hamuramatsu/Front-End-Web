@@ -1,5 +1,5 @@
 const sanityUrl = 'https://c2s2sg6g.api.sanity.io/v2022-03-07/data/query/production';
-const query = '*[_type == "featured"]{ _id, title, "imageUrl": image1.asset->url }';
+const query = '*[_type == "featured"]| order(order asc){order, slug, title, "imageUrl": image1.asset->url }';
 
   fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
 
@@ -11,7 +11,7 @@ const query = '*[_type == "featured"]{ _id, title, "imageUrl": image1.asset->url
   })
   .then((data) => {
     // console.log(data);
-    // Render your data to the HTML
+    // Render data to the HTML
     const worksDiv = document.getElementById('featuredGrid');
     worksDiv.innerHTML += data.result
       .map(
@@ -27,7 +27,9 @@ const query = '*[_type == "featured"]{ _id, title, "imageUrl": image1.asset->url
 
           return `
             <div class="${className}">
-              <a href="#"><img src="${work.imageUrl}" alt="${work.title}"></a>
+              <a href="workPage.html?slug=${work.slug.current}">
+                <img src="${work.imageUrl}" alt="${work.title}">
+              </a>
             </div>
             ${textContent}
           `;

@@ -27,8 +27,9 @@ fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
       document.getElementById('workMedium').innerText = work.medium;
       document.getElementById('workDescription').innerText = work.description;
       document.getElementById('workImage').src = work.imageUrl;
+      document.getElementById('workImage').alt = work.title;
     } else {
-      document.getElementById('workDetails').innerText = 'Work not found!';
+      document.getElementById('detailsContainer').innerText = 'Work not found!';
     }
   })
   .catch((error) => console.error('Error fetching work data:', error));

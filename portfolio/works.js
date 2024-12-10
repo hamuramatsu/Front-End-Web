@@ -11,7 +11,7 @@ const query = '*[_type == "work"] | order(order asc) {title, order, slug, "image
   })
   .then((data) => {
     // console.log(data);
-    // Render your data to the HTML
+    // Render data to the HTML
     const worksDiv = document.getElementById('worksGrid');
     worksDiv.innerHTML += data.result
       .map(
