@@ -1,5 +1,5 @@
 const sanityUrl = 'https://c2s2sg6g.api.sanity.io/v2022-03-07/data/query/production';
-const query = '*[_type == "work"] | order(order asc) {title, order, "imageUrl": image1.asset->url }';
+const query = '*[_type == "work"] | order(order asc) {title, order, slug, "imageUrl": image1.asset->url }';
 
   fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
 
@@ -30,7 +30,9 @@ const query = '*[_type == "work"] | order(order asc) {title, order, "imageUrl": 
           `;
           return `
             <div class="${className}">
-              <a href="#"><img src="${work.imageUrl}" alt="${work.title}"></a>
+              <a href="workPage.html?slug=${work.slug.current}">
+                <img src="${work.imageUrl}" alt="${work.title}">
+              </a>
             </div>
             ${textContent}
           `;

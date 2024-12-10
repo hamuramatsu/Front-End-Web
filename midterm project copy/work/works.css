@@ -56,39 +56,6 @@ body {
     }
   
   
-  #hero {
-    align-items: center;
-    padding: 10rem;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    margin: 0.3rem;
-    font-size: xx-large;
-    text-align: justify;
-  }
-  
-  #hero h1 {
-    display: inline;
-  }
-  
-  #hello {
-    position: relative; /* Make #hello the reference point for the pseudo-element */
-    display: inline-block; /* Required for hover effect and positioning */ 
-  }
-  
-  /* insert image on hover from gpt */
-  #hello:hover::before {
-    content: url('images/smiley.png');
-    position: absolute;
-    top: -440px; /* Vertical position of image */
-    left: 30%; /* Horizontal pos */
-    transform: translateX(-50%) scale(0.1);
-  }
-  
-  
-  #name:hover {
-    font-style: italic;
-  }
-  
   #scroll-title {
     position: sticky;
     top: 480px; /* Dist from top while scrolling */
@@ -150,18 +117,6 @@ body {
     object-fit: cover; /* Maintain aspect ratio and cover the grid area */
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-  }
-  
-  #badge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
-  }
-  
-  #badge video{
-    width: 50%;
-    height: auto;  /* maintain aspect ratio */
   }
   
   footer {
