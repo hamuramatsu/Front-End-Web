@@ -9,7 +9,8 @@ const query = `*[_type == "work" && slug.current == "${workSlug}"] {
   yearCreated,
   medium,
   "description": pt::text(body),
-  "imageUrl": image1.asset->url
+  "mainImage": mainImage.asset->url, 
+  "moreImages": moreImages[].asset->url
 }`;
 
 fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
@@ -22,12 +23,24 @@ fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
   .then((data) => {
     if (data.result.length > 0) {
       const work = data.result[0];
+      
+      // Populate main content
       document.getElementById('workTitle').innerText = work.title;
       document.getElementById('workYear').innerText = work.yearCreated;
       document.getElementById('workMedium').innerText = work.medium;
       document.getElementById('workDescription').innerText = work.description;
-      document.getElementById('workImage').src = work.imageUrl;
+      document.getElementById('workImage').src = work.mainImage;
       document.getElementById('workImage').alt = work.title;
+
+      // Render gallery images
+      const moreImagesDiv = document.getElementById('moreImagesGrid');
+      if (work.moreImages && work.moreImages.length > 0) {
+        moreImagesDiv.innerHTML = work.moreImages
+          .map((image) => `<div class="moreImages-item"><img src="${image}" alt="work.title"></div>`)
+          .join('');
+      } else {
+        moreImagesDiv.innerHTML = '<p></p>';
+      }
     } else {
       document.getElementById('detailsContainer').innerText = 'Work not found!';
     }

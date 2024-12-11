@@ -36,20 +36,24 @@ export const workType = defineType({
         type: 'string',
       }),
       defineField({
-        name: 'image1',
+        name: 'mainImage',
         type: 'image',
+        options: {
+          hotspot: true, // Enables cropping and positioning
+        },
       }),
       defineField({
-        name: 'image2',
-        type: 'image',
-      }),
-      defineField({
-        name: 'image3',
-        type: 'image',
-      }),
-      defineField({
-        name: 'image4',
-        type: 'image',
+        name: 'moreImages',
+        title: 'Images',
+        type: 'array',
+        of: [
+          {
+            type: 'image',
+            options: {
+              hotspot: true, // Enables cropping and positioning
+            },
+          },
+        ],
       }),
       defineField({
         name: 'body',
