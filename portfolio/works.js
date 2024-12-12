@@ -41,3 +41,17 @@ const query = '*[_type == "work"] | order(order asc) {title, order, slug, "mainI
       .join('');
   })
   .catch((error) => console.error('Error fetching Sanity data:', error));
+
+
+// Grayscale Toggle Functionality
+const toggleGrayscaleButton = document.getElementById('toggleGrayscale');
+
+// Add an event listener to toggle grayscale for all dynamically rendered images
+toggleGrayscaleButton.addEventListener('click', () => {
+  console.log("clicked");
+  // Select all images inside the worksGrid container
+  const images = document.querySelectorAll('#worksGrid img');
+  images.forEach((img) => {
+    img.classList.toggle('grayscale');
+  });
+});
