@@ -17,7 +17,7 @@ const query = '*[_type == "work"] | order(order asc) {title, order, slug, "mainI
       .map(
         (work, index) => {
           // Create a class name based on the index (e.g., one, two, three, etc.)
-          const className = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'][index % 12];
+          const className = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'][index % 15];
 
           // Check if the index is odd
           const isOdd = index % 2 !== 0;
