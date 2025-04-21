@@ -35,6 +35,15 @@ fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
       // Render gallery images
       const moreImagesDiv = document.getElementById('moreImagesGrid');
       if (work.moreImages && work.moreImages.length > 0) {
+        // Apply the correct layout class
+        if (work.moreImages.length > 3) {
+          moreImagesDiv.classList.add('threeCol');
+          moreImagesDiv.classList.remove('autoFit');
+        } else {
+          moreImagesDiv.classList.add('autoFit');
+          moreImagesDiv.classList.remove('threeCol');
+        }
+      
         moreImagesDiv.innerHTML = work.moreImages
           .map((image) => `<div class="moreImages-item"><img src="${image}" alt="${work.title}"></div>`)
           .join('');

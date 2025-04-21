@@ -139,13 +139,25 @@ body {
   font-weight: bold;
 }
 
-#moreImagesGrid {
+
+/* Default: auto-fit for 3 or fewer */
+#moreImagesGrid.autoFit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 6rem;
+  margin-top: 2rem;
+}
+
+/* Force 3 columns for more than 3 images */
+#moreImagesGrid.threeCol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 6rem;
   margin-top: 2rem;
 }
+
 
 #moreImagesGrid img {
   width: 100%;
