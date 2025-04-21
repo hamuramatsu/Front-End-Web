@@ -36,7 +36,7 @@ fetch(`${sanityUrl}?query=${encodeURIComponent(query)}`)
       const moreImagesDiv = document.getElementById('moreImagesGrid');
       if (work.moreImages && work.moreImages.length > 0) {
         moreImagesDiv.innerHTML = work.moreImages
-          .map((image) => `<div class="moreImages-item"><img src="${image}" alt="work.title"></div>`)
+          .map((image) => `<div class="moreImages-item"><img src="${image}" alt="${work.title}"></div>`)
           .join('');
       } else {
         moreImagesDiv.innerHTML = '<p></p>';
